@@ -1,0 +1,145 @@
+
+button.md-fab {
+  margin: 0;
+  float: right;
+}
+
+.my-sidebar{
+	padding: 0px;
+	min-width: 240px;
+    width: 240px;
+    border-radius: 0px;
+}
+
+.my-card-space
+{
+	overflow: auto !important;
+    border-radius: 0;
+	/* height: 100%; */
+}
+
+
+md-sidenav{
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12) !important;
+    z-index: 1 !important;
+	overflow-y: hidden; // hide vertical
+	overflow-x: hidden; // hide horizontal
+}
+
+.my-sidebar-image{
+    width: 44px;
+    height: 44px;
+	margin: 0px 0px;
+    border-radius: 50%;
+	display: inline-block;
+	float: left;
+}
+
+.my-sidebar-text{
+	margin: 120px 46px;
+	color: #e8ebef;
+	float: center;
+	display: flex;
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 64px;
+	font-size: 30px;
+	font-weight: 400;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+
+}
+
+.sidelink{
+    background: #ddd;
+    border-radius: 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 10px 10px 10px;
+	display: inline-block;
+	width: 220px;
+	overflow: hidden;
+	text-align: left;
+	
+}
+
+.login{
+    background: #ddd;
+    border-radius: 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 10px 10px 10px;
+	display: inline-block;
+	width: 220px;
+	overflow: hidden;
+	
+}
+
+.loginText{
+    background: #ddd;
+    border-radius: 0px;
+    margin: 0px 6px 0px 0px;
+}
+
+.logo{
+	overflow: hidden;
+    background: #ddd;
+	background-image: url("../../apple-icon-152x152.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 0px;
+	min-height: 160px;
+    height: 160px;
+}
+
+.paper-shadow {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+h1 {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 64px;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: RobotoDraft, "Helvetica Neue", sans-serif;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+}
+
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+nav a:visited, a:link {
+  color: #607D8B;
+}
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+nav a.active {
+  color: #039be5;
+}
+
+div{
+  margin: auto;
+  text-align: center;
+  padding-top: 10px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+img{
+  margin: auto;
+  text-align: center;
+  border-radius: 10px;
+}

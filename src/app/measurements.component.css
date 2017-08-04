@@ -1,0 +1,65 @@
+/* Master Styles */
+md-card{
+	margin-bottom: 2px;
+	overflow: auto
+}
+
+a {
+  cursor: pointer;
+  color: #607D8B;
+  cursor: hand;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+span{
+  padding: 10px 10px 10px 10px
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1pt !important;
+}
+
+
+
+:host /deep/ ng2-smart-table tbody > * { 
+	padding: .5rem 1rem;
+    border: 1px solid #e9ebec;
+	 font-size: 16px;
+    line-height: 1.5;
+    color: #606c71;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+	font-size: 90%;
+    /* word-break: normal; */
+    word-break: keep-all;
+}
+
+:host /deep/ ng2-smart-table  td { 
+    border: 1px solid #e9ebec;
+    line-height: 1.5;
+    color: #606c71;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+:host /deep/ ng2-smart-table  span { 
+    padding: 1.5em;
+	font-size: 110%;
+}
+
+:host /deep/ ng2-smart-table  a { 
+    padding: 1em;
+	font-size: 110%;
+}
+

@@ -1,0 +1,114 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.4/nv.d3.min.css"/>
+<span>
+	<md-card>
+		<h2>Leaderboard</h2>
+		<table width="100%">
+			<tr></tr>
+			<tr class="leaderText" *ngFor="let deltaMeasurement of deltaWeighins">
+				<td valign="center">
+					<sup class="leaderText" *ngIf="deltaMeasurement.DeltaBodyFat!=0 && deltaMeasurement.DeltaWeight!=0">
+						<img *ngIf="deltaMeasurement.DeltaWeight>0" src="downGreenArrow.png" height="15" />
+						<img *ngIf="deltaMeasurement.DeltaWeight<0" src="upRedArrow.png" height="15" />
+						{{deltaMeasurement.DeltaWeight}} lbs 
+					</sup>
+				</td>
+				<td valign="center">
+					<sup>
+						<img *ngIf="deltaMeasurement.DeltaBodyFat>0" src="downGreenArrow.png" height="15" />
+						<img *ngIf="deltaMeasurement.DeltaBodyFat<0" src="upRedArrow.png" height="15" />
+						{{deltaMeasurement.DeltaBodyFat}}%bf 
+					</sup>
+				</td>
+				<td valign="center">
+					<b class="leaderText">{{deltaMeasurement.Participant}}</b>
+				</td>
+				<td valign="center">
+					<i *ngIf="deltaMeasurement.IsStartWeight==0" class="leaderText">{{deltaMeasurement.DateDeltaDescription}}</i>
+				</td>
+			</tr>
+		</table>
+	</md-card>
+</span>				
+<span>
+	<md-card>
+					<h2>Payout Ratio by Rank</h2>
+					<nvd3 [options]="payoutDonutOptions" [data]="payoutDonutData">
+					</nvd3>
+					<h5>{{cashLeftDescription}}</h5>
+	</md-card>
+</span>
+<span>
+	<md-card>
+					<h2>Days in the Competition</h2>
+					<nvd3 [options]="daysLeftOptions" [data]="daysLeftData">
+					</nvd3>
+					<h5>{{timeLeftDescription}}</h5>
+	</md-card>
+</span>
+<span>
+	<md-card>
+					<h2>Participants Reported In</h2>
+					<nvd3 [options]="reportedOptions" [data]="reportedData" >
+					</nvd3>
+					<h5>{{ reportedDescription }}</h5>
+	</md-card>
+</span>
+<span>
+	<md-card>
+		<h2>Body Fat % Lost Over Time</h2>
+				<nvd3 [options]="bodyFatLostOptions" [data]="data">
+				</nvd3>
+		
+	</md-card>
+</span>
+<span>
+	<md-card>
+		 <h2>Body Fat % Over Time</h2>
+				<nvd3 [options]="bodyFatOptions" [data]="data">
+				</nvd3>
+	</md-card>
+</span>
+<span>
+	<md-card>
+		 <h2>Weight Lost Over Time</h2>
+				<nvd3 [options]="weightLostOptions" [data]="data">
+				</nvd3>
+	</md-card>
+</span>
+<span>
+	<md-card>
+		 <h2>Weight Over Time</h2>
+				<nvd3 [options]="weightOptions" [data]="data">
+				</nvd3>
+	</md-card>
+</span>
+<span>
+	<md-card>
+		 <h2>Waist Size Over Time</h2>
+				<nvd3 [options]="waistOptions" [data]="data">
+				</nvd3>
+	</md-card>
+</span>
+<span>
+	<md-card>
+		 <h2>Waist Inches Lost Over Time</h2>
+				<nvd3 [options]="waistLostOptions" [data]="data">
+				</nvd3>
+		
+	</md-card>
+</span>
+<span>
+	<md-card>
+		 <h2>Viseral Over Time</h2>
+				<nvd3 [options]="viseralOptions" [data]="data">
+				</nvd3>
+		
+	</md-card>
+</span>
+<span>
+	<md-card>
+		 <h2>Viseral Lost Over Time</h2>
+				<nvd3 [options]="viseralLostOptions" [data]="data">
+				</nvd3>
+	</md-card>
+</span>

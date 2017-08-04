@@ -1,0 +1,28 @@
+/* Master Styles */
+
+.titlecard{
+	text-align: left;
+	padding: 0px;
+	margin: 24px 24px 24px 24px;
+	align: center;
+	overflow: hidden;
+}
+
+.innercard{
+	margin: 12px 24px 24px 24px !important;
+	overflow: hidden;
+}
+
+.inputfields{
+	width:80%;
+	font-size:16px;
+	padding: 10px;
+}
+
+.inputtable{
+	align: center;	
+}
+
+.buttoncell{
+	text-align: right;
+}

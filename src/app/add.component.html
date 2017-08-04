@@ -1,0 +1,83 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css" rel="stylesheet">
+<md-card class="titlecard">
+	<md-toolbar color="primary" class="md2 md-toolbar md-primary paper-shadow"><div class="md-toolbar-layout">
+		New Measurement</div></md-toolbar>
+	<md-card-content class="innercard">
+	<json-schema-form
+	  [form]="yourCompoundInputObject"
+	  (onSubmit)="yourOnSubmitFn($event)">
+	</json-schema-form>
+    <form>
+      <table style="width: 100%" cellspacing="0" class="inputtable">
+
+	  <tr>
+        <td>
+          <md-input-container class="inputfields" >
+            <input mdInput placeholder="Date (yyyy-MM-dd)" [ngModelOptions]="{standalone: true}"  [(ngModel)]="measurement.Date" >
+          </md-input-container>
+		  </td>
+		  
+        <td>
+          <md-input-container class="inputfields" >
+            <input mdInput placeholder="Time (HH:mm)" [ngModelOptions]="{standalone: true}"  [(ngModel)]="measurement.Time" >
+          </md-input-container>
+        </td>
+      </tr><tr>
+        <td>
+           <md-select placeholder="Participant" class="inputfields"  [ngModelOptions]="{standalone: true}"  [(ngModel)]="measurement.Participant">
+			   <md-option *ngFor="let participant of participants" [value]="participant.Id">{{ participant.Name }}</md-option>
+			</md-select>
+        </td>
+        <td>
+          <md-input-container class="inputfields">
+            <input mdInput placeholder="Weight (000.0 lbs)" maxLength="5"  [ngModelOptions]="{standalone: true}"  [(ngModel)]="measurement.Weight">
+          </md-input-container>
+        </td>
+      </tr><tr>
+        <td>
+          <md-input-container class="inputfields" >
+            <input mdInput placeholder="Body Fat (00.0 %)" maxLength="4"  [ngModelOptions]="{standalone: true}"  [(ngModel)]="measurement.BodyFat">
+          </md-input-container>
+        </td>
+        <td>
+          <md-input-container class="inputfields">
+            <input mdInput placeholder="Viseral (0)" maxLength="2" [ngModelOptions]="{standalone: true}"  [(ngModel)]="measurement.Viseral">
+          </md-input-container>
+        </td>
+      </tr><tr>
+        <td>
+          <md-input-container class="inputfields">
+            <input mdInput placeholder="Waist (00 0/0 in)" maxLength="8" [ngModelOptions]="{standalone: true}"  [(ngModel)]="measurement.Waist">
+          </md-input-container>
+		  </td>
+        <td>
+           <md-select placeholder="Tool" class="inputfields" [ngModelOptions]="{standalone: true}"  [(ngModel)]="measurement.Tool">
+			   <md-option selected value="Klees Scale" >Klee's Scale</md-option>
+			   <md-option value="Ivetos Handheld">Iveto's Handheld</md-option>
+			</md-select>
+        </td>
+		</tr><tr>
+		<td>
+           <md-select  *ngIf="app.isAdmin==true" placeholder="QA Buddy"  class="inputfields" [ngModelOptions]="{standalone: true}"  [(ngModel)]="measurement.Buddy">
+			   <md-option *ngFor="let participant of participants" [value]="participant.Id">{{ participant.Name }}</md-option>
+			</md-select>
+			 <md-input-container *ngIf="app.isAdmin!=true" class="inputfields">
+				<input mdInput placeholder="QA Buddy" disabled="true" [ngModelOptions]="{standalone: true}"  [(ngModel)]="measurement.Buddy">
+			  </md-input-container>
+
+        </td>
+		<td class="buttoncell"><button md-raised-button color="accent"  (click)="add()">Add</button>
+        </td>
+      </tr>
+	  <tr>
+		<td><p></p><p></p>
+		</td>
+        <td>
+		</td>
+		</tr>
+		</table>
+    </form>
+  </md-card-content>
+    
+</md-card>

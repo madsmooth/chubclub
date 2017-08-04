@@ -1,0 +1,8 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="../node_modules/ng2-smart-table/ng2-smart-table.component.css" rel="stylesheet">
+<span>
+	<md-card>
+		<ng2-smart-table [settings]="settings" [source]="source"></ng2-smart-table>
+	</md-card>
+</span>
+<button md-fab md-fab-bottom-right (click)="add()"><md-icon>add circle</md-icon></button>
