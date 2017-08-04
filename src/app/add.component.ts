@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router }            from '@angular/router';
 import { MaterialModule } from '@angular/material';
 import {FormsModule } from '@angular/forms';
-import {SpinnerModule} from 'primeng/primeng';
 
 import { AppComponent }                from './app.component';
 import { Weighin }                from './weighin';
@@ -158,7 +157,7 @@ export class AddComponent implements OnInit {
         {
           "type": "submit",
           "style": "btn-info",
-          "title": "Add Measurement"
+          "title": "Add Measurement",
           "onClick": "add()"
         }
       ]
